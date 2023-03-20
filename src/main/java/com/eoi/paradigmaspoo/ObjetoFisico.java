@@ -1,27 +1,40 @@
 package com.eoi.paradigmaspoo;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 /**
  * La clase Objeto fisico. Esta clase representa un concepto de objeto abstracto, en el que englobamos todos
  * aquellos objetos que poseen propiedades físicas. Es un ejemplo del paradigma de ABSTRACCION.
- *
- *
  */
 
 
 public abstract class ObjetoFisico {
+    /**
+     * El nombre del objeto físico.
+     */
     private String nombre;
 
+    /**
+     * La altura del objeto físico, expresada en centímetros.
+     */
     private int alto;
 
+    /**
+     * El ancho del objeto físico, expresado en centímetros.
+     */
     private int ancho;
 
+    /**
+     * El fondo del objeto físico, expresado en centímetros.
+     */
     private int fondo;
 
+    /**
+     * El peso del objeto físico, expresado en gramos.
+     */
     private int peso;
 
+    /**
+     * El material del que está compuesto principalmente un objeto físico.
+     */
     private String material;
 
     /**
@@ -34,7 +47,6 @@ public abstract class ObjetoFisico {
      * @param peso     the peso
      * @param material the material
      */
-
     protected ObjetoFisico(String nombre, int alto, int ancho, int fondo, int peso, String material) {
         this.nombre = nombre;
         this.alto = alto;
@@ -45,9 +57,8 @@ public abstract class ObjetoFisico {
     }
 
     /**
-     * Show info.
+     * El método showInfo muestra en pantalla la información básica de un objeto físico.
      */
-
     public void showInfo(){
         System.out.println ("Nombre: " + this.nombre + "\n" +
                             "Material: " + this.material + "\n" +
