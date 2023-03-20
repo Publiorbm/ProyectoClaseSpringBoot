@@ -9,8 +9,8 @@ import java.util.List;
  * The type Mueble.
  */
 @Component
-public abstract class Mueble extends ObjetoFisico {
 
+public abstract class Mueble extends ObjetoFisico {
     private String habitacion;
 
     /**
@@ -67,6 +67,9 @@ public abstract class Mueble extends ObjetoFisico {
         this.componentes = componentes;
     }
 
+    /**
+     * El método showInfo muestra en pantalla la información básica de un mueble.
+     */
     @Override
     public void showInfo() {
         System.out.println("FICHA DE MUEBLE");
@@ -78,4 +81,13 @@ public abstract class Mueble extends ObjetoFisico {
             o.showInfo();
         });
     }
+
+    public String getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(String habitacion) {
+        this.habitacion = habitacion;
+    }
+
 }
