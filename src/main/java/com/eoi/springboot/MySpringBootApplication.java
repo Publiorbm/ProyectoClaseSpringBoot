@@ -25,8 +25,8 @@ public class MySpringBootApplication {
      *
      * @return el string por defecto "Main Class" para testear la aplicación
      */
-    @GetMapping("/")
+   /* @GetMapping("/")
     String helloMain() {
         return "Main class";
-    }
+    } */
 }
