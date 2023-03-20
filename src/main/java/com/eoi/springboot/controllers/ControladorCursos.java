@@ -1,11 +1,9 @@
 package com.eoi.springboot.controllers;
 
+import com.eoi.paradigmaspoospringboot.PataStandar;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Log4j2
@@ -21,8 +19,12 @@ public class ControladorCursos {
     }
 
     @GetMapping("")
-    String create(@RequestParam("nombre") String valueOne){
-        return valueOne;
+    @ResponseBody
+    //String create(@RequestParam("nombre") String valueOne){
+    PataStandar create(@RequestParam("nombre") String valueOne){
+        //return "<html><body><h1>Bienvenido "+valueOne+"</h1><p>Este es un párrafo de ejemplo</p></body></html>"; // dándole un formato html para enviarlo a la página
+        //return valueOne;
+        return new PataStandar();
     }
 
 

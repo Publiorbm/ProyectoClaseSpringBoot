@@ -1,11 +1,15 @@
 package com.eoi.paradigmaspoospringboot;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * La clase Objeto fisico. Esta clase representa un concepto de objeto abstracto, en el que englobamos todos
  * aquellos objetos que poseen propiedades físicas. Es un ejemplo del paradigma de ABSTRACCION.
  */
+@Getter
+@Setter
 public abstract class ObjetoFisico {
 
 
